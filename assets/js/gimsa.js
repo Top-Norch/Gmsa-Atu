@@ -29,10 +29,36 @@ document.addEventListener("keydown", (event) => {
 });
 
 if (membershipForm) {
+	const googleFormUrl = (membershipForm.dataset.googleFormUrl || "").trim();
+
+	const setFormNotice = (message, state = "preview") => {
+		formNotice.textContent = message;
+		formNotice.classList.remove("is-preview", "is-success", "is-error");
+		if (state === "success") {
+			formNotice.classList.add("is-success");
+		} else if (state === "error") {
+			formNotice.classList.add("is-error");
+		} else {
+			formNotice.classList.add("is-preview");
+		}
+	};
+
 	membershipForm.addEventListener("submit", (event) => {
 		event.preventDefault();
-		formNotice.textContent = "Your details were not sent or stored. This page is a preview without a registration service.";
-		formNotice.classList.add("is-preview");
+
+		if (!membershipForm.checkValidity()) {
+			membershipForm.reportValidity();
+			setFormNotice("Please complete the required fields before submitting.", "error");
+			return;
+		}
+
+		if (!googleFormUrl) {
+			setFormNotice("Add your Google Form URL to activate live registration. The form is ready for linking.", "preview");
+			return;
+		}
+
+		window.open(googleFormUrl, "_blank", "noopener,noreferrer");
+		setFormNotice("Your registration page has opened in a new tab. Please complete the Google Form to submit your details.", "success");
 	});
 }
 

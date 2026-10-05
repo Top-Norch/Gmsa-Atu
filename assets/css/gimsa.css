@@ -95,7 +95,7 @@ button, input, select { font: inherit; }
 	padding: 132px max(7.2vw, 28px) 90px;
 	overflow: hidden;
 	isolation: isolate;
-	background: #102b20 url("imageENT.jpg") center 43% / cover no-repeat;
+	background: #102b20 url("../images/imageENT.jpg") center 43% / cover no-repeat;
 	color: white;
 }
 
@@ -108,7 +108,7 @@ button, input, select { font: inherit; }
 	width: min(493px, 100%);
 	margin: 25px 0 8px;
 	padding: 8px 12px 10px;
-	background: linear-gradient(rgba(3, 24, 16, .82), rgba(3, 24, 16, .82)), url("imageENT.jpg") center 62% / cover no-repeat;
+	background: linear-gradient(rgba(3, 24, 16, .82), rgba(3, 24, 16, .82)), url("../images/imageENT.jpg") center 62% / cover no-repeat;
 	color: white;
 	font-family: var(--sans);
 	font-size: 40px;
@@ -163,7 +163,7 @@ button, input, select { font: inherit; }
 	align-items: center;
 	padding: 150px max(7.2vw, 28px) 76px;
 	isolation: isolate;
-	background: #123e2d url("imageMOS.webp") center 42% / cover no-repeat;
+	background: #123e2d url("../images/imageMOS.webp") center 42% / cover no-repeat;
 	color: white;
 }
 .about-hero::before { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(90deg, rgba(3, 26, 17, .88), rgba(3, 26, 17, .58) 70%, rgba(3, 26, 17, .25)); }
@@ -201,7 +201,7 @@ button, input, select { font: inherit; }
 	overflow: hidden;
 	border: 1px solid #c9d5cb;
 	border-radius: 18px 18px 24px 24px;
-	background: linear-gradient(90deg, rgba(255, 255, 255, .99) 0%, rgba(255, 255, 255, .96) 58%, rgba(255, 255, 255, .77) 100%), url("imageADMIN.jpeg") right center / cover no-repeat;
+	background: linear-gradient(90deg, rgba(255, 255, 255, .99) 0%, rgba(255, 255, 255, .96) 58%, rgba(255, 255, 255, .77) 100%), url("../images/imageADMIN.jpeg") right center / cover no-repeat;
 }
 .contact-panel-content { max-width: 760px; padding: 46px 42px 40px; }
 .contact-panel h1 { margin: 0; color: #172820; font-family: var(--serif); font-size: clamp(31px, 4vw, 38px); font-weight: 600; line-height: 1.2; }
@@ -221,7 +221,7 @@ button, input, select { font: inherit; }
 	align-items: center;
 	padding: 150px 24px 62px;
 	isolation: isolate;
-	background: #123e2d url("imageBL.jpg") center 38% / cover no-repeat;
+	background: #123e2d url("../images/imageBL.jpg") center 38% / cover no-repeat;
 	color: white;
 }
 .board-intro::before { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(90deg, rgba(3, 28, 19, .86), rgba(3, 28, 19, .56) 65%, rgba(3, 28, 19, .3)); }
@@ -336,6 +336,8 @@ button, input, select { font: inherit; }
 .submit-button { border: 0; cursor: pointer; }
 .form-notice { min-height: 25px; margin: 14px 0 0; color: var(--muted); font-size: 13px; }
 .form-notice.is-preview { color: #765a1d; font-weight: 600; }
+.form-notice.is-success { color: #0d6b43; font-weight: 600; }
+.form-notice.is-error { color: #8d2d2d; font-weight: 600; }
 
 .site-footer { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 7px 24px; padding: 28px max(calc((100% - 1160px) / 2), 24px); border-top: 1px solid var(--line); background: #f2f5ef; }
 .footer-brand { width: fit-content; color: var(--deep-green); font-weight: 700; }
